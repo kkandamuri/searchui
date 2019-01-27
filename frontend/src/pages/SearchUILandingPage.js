@@ -134,7 +134,7 @@ class SearchUILandingPage extends React.Component<SearchUILandingPageDefaultProp
 
     const indexStatusLabel = this.state.loading ? 'Analyzing your index\u2026' : `Searching across ${docs} from ${sources}.`;
 
-    const logoUri = this.props.logoUri ? this.props.logoUri : 'img/attivio-logo.png';
+    const logoUri = this.props.logoUri ? this.props.logoUri : 'img/attivio-logo.png'; // cspell:disable-line
     const logoAltText = this.props.logoAltText ? this.props.logoAltText : 'Attivio';
     const logoStyle = {};
     if (this.props.logoWidth) {

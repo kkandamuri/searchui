@@ -114,12 +114,12 @@ class SearchUISearchPage extends React.Component<SearchUISearchPageProps, Search
       'title',
       'table',
       'size',
-      'creationdate',
+      'creationdate', // cspell:disable-line
       'date',
-      'guid',
-      'linkcount',
-      'socialsecurity',
-      'zipcode',
+      'guid', // cspell:disable-line
+      'linkcount', // cspell:disable-line
+      'socialsecurity', // cspell:disable-line
+      'zipcode', // cspell:disable-line
     ],
     pieChartFacets: null,
     barChartFacets: null,

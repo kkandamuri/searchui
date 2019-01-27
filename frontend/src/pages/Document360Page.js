@@ -49,12 +49,12 @@ type Document360PageProps = {
   table: string;
   /**
    * A field expression to override what is used for the teaser, defaults to
-   * 'SCOPETEASER(text, fragment=true, numFragments=4, fragmentScope=sentence)'
+   * 'SCOPETEASER(text, fragment=true, numFragments=4, fragmentScope=sentence)' // cspell:disable-line
    */
   teaser: string;
   /**
    * A field expression to override what is used for the text, defaults to
-   * 'SCOPETEASER(text, fragment=true, numFragments=1, fragmentSize=2147483647)'
+   * 'SCOPETEASER(text, fragment=true, numFragments=1, fragmentSize=2147483647)' // cspell:disable-line
    */
   text: string;
   /**
@@ -62,12 +62,12 @@ type Document360PageProps = {
    * defaults to 'img.uri.preview'
    */
   previewImageUri: string;
-  /** A field expression to override what is used for the UTI to the document’s
-   * thumbnail, defaults to 'img.uri.thumbnail' */
+  /** A field expression to override what is used for the URI to the document’s
+   * thumbnail, defaults to 'img.uri.thumbnail' */  // cspell:disable-line
   thumbnailImageUri: string;
   /**
    * A field expression to override what is used for the query to use when asking
-   * for similar documents, defaults to 'morelikethisquery' */
+   * for similar documents, defaults to 'morelikethisquery' */  // cspell:disable-line
   moreLikeThisQuery: string;
   /** The list of fields to use to do the join */
   insightGraphLinkingFields: Array<string>;
@@ -108,11 +108,11 @@ class Document360Page extends React.Component<Document360PageDefaultProps, Docum
     title: FieldNames.TITLE,
     uri: FieldNames.URI,
     table: FieldNames.TABLE,
-    teaser: 'SCOPETEASER(text, fragment=true, numFragments=4, fragmentScope=sentence)',
-    text: 'SCOPETEASER(text, fragment=true, numFragments=1, fragmentScope=2147483647)',
-    previewImageUri: 'img.uri.preview',
-    thumbnailImageUri: 'img.uri.thumbnail',
-    moreLikeThisQuery: 'morelikethisquery',
+    teaser: 'SCOPETEASER(text, fragment=true, numFragments=4, fragmentScope=sentence)', // cspell:disable-line
+    text: 'SCOPETEASER(text, fragment=true, numFragments=1, fragmentScope=2147483647)', // cspell:disable-line
+    previewImageUri: 'img.uri.preview', // cspell:disable-line
+    thumbnailImageUri: 'img.uri.thumbnail', // cspell:disable-line
+    moreLikeThisQuery: 'morelikethisquery', // cspell:disable-line
     insightGraphLinkingFields: [
       'people',
       'company',
@@ -233,7 +233,7 @@ class Document360Page extends React.Component<Document360PageDefaultProps, Docum
           `${this.props.text} as text`,
           `${this.props.previewImageUri} as previewImageUri`,
           `${this.props.thumbnailImageUri} as thumbnailImageUri`,
-          `${this.props.moreLikeThisQuery} as morelikethisquery`,
+          `${this.props.moreLikeThisQuery} as morelikethisquery`, // cspell:disable-line
         ];
         const entityFields = Array.from(this.props.entityFields.keys());
         req.fields = fields.concat(entityFields);
@@ -293,6 +293,7 @@ class Document360Page extends React.Component<Document360PageDefaultProps, Docum
         <Grid fluid>
           <Row>
             <Col xs={10} sm={10}>
+              { /* cspell:disable-next-line */ }
               <h1 className="attivio-360-hed" >
                 <SearchResultTitle doc={doc} />
               </h1>

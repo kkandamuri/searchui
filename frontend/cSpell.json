@@ -1,0 +1,34 @@
+{
+  "version": "0.1",
+  "language": "en",
+  "words": [
+    "attivio",
+    "attivio-360-hed",
+    "glyphicon",
+    "glyphicons",
+    "highcharts",
+    "keyphrase",
+    "keyphrases",
+    "mapbox",
+    "num",
+    "polyfill",
+    "react",
+    "SCOPETEASER",
+    "searchui",
+    "servlet",
+    "servlet's",
+    "solr",
+    "stopwords",
+    "subheader"
+  ],
+  "flagWords": [
+    "hte"
+  ],
+  "minWordLength": 3,
+  "languageSettings": [
+    {
+      "languageId": "javascript",
+      "dictionaries": ["softwareTerms", "html", "typescript"]
+    }
+  ]
+}

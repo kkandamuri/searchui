@@ -71,7 +71,7 @@ export default class SearchUIApp extends React.Component<void, {}, SearchUIAppSt
     '/results',
     '/insights',
     '/doc360',
-    '/locallogin',
+    '/locallogin',  // cspell:disable-line
     '/error',
   ];
 
@@ -173,7 +173,7 @@ export default class SearchUIApp extends React.Component<void, {}, SearchUIAppSt
     });
     SearchUIApp.loadConfig('users', (data: string | null) => {
       // Users are not required so we set them to an empty object by default.
-      // If there weas an error loading the users, we'll pretend there wasn't—
+      // If there was an error loading the users, we'll pretend there wasn't—
       // even if the server isn't sending us users, we don't care unless we're
       // configured for XML authentication and, in that case, the AuthUtils.configure()
       // method will complain about that...
@@ -197,7 +197,7 @@ export default class SearchUIApp extends React.Component<void, {}, SearchUIAppSt
   }
 
   getMastheadNavTabs(): Array<MastheadNavTabs.NavTabInfo> {
-    if (this.state.config.searchEngineTypen && this.state.config.searchEngineType !== 'attivio') {
+    if (this.state.config.searchEngineType && this.state.config.searchEngineType !== 'attivio') {
       return [];
     }
     return [
@@ -276,6 +276,7 @@ export default class SearchUIApp extends React.Component<void, {}, SearchUIAppSt
                 <AuthRoute exact path="/results" component={SearchUISearchPage} />
                 <AuthRoute exact path="/insights" component={SearchUIInsightsPage} />
                 <AuthRoute exact path="/doc360" component={Document360Page} />
+                { /* cspell:disable-next-line */ }
                 <Route exact path="/locallogin" component={LoginPage} />
                 <Route exact path="/error" component={SearchUIErrorPage} />
                 <Route path="*" component={SearchUIErrorPage} />
